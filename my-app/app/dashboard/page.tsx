@@ -6,6 +6,7 @@ import DashboardHeader from "../components/DashboardHeader";
 import StatsOverview from "../components/StatsOverview";
 import ProgressChart from "../components/ProgressChart";
 import PortalStatus from "../components/PortalStatus";
+import TrendChart from "../components/TrendChart";
 import { KpiData, PortalStatus as PortalStatusType } from "@/Types";
 
 export default function Dashboard() {
@@ -65,6 +66,9 @@ export default function Dashboard() {
         </div>
         <div>
           <PortalStatus portals={portals} />
+        </div>
+        <div className="lg:col-span-2">
+          <TrendChart kpis={kpis} />
         </div>
       </div>
     </div>

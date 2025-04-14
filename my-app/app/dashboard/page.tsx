@@ -7,6 +7,7 @@ import StatsOverview from "../components/StatsOverview";
 import ProgressChart from "../components/ProgressChart";
 import PortalStatus from "../components/PortalStatus";
 import TrendChart from "../components/TrendChart";
+import RecentKPIs from "../components/RecentKPIs";
 import { KpiData, PortalStatus as PortalStatusType } from "@/Types";
 
 export default function Dashboard() {
@@ -69,6 +70,9 @@ export default function Dashboard() {
         </div>
         <div className="lg:col-span-2">
           <TrendChart kpis={kpis} />
+        </div>
+        <div>
+          <RecentKPIs kpis={kpis} />
         </div>
       </div>
     </div>

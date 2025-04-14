@@ -5,6 +5,7 @@ import { useState } from "react";
 import DashboardHeader from "../components/DashboardHeader";
 import StatsOverview from "../components/StatsOverview";
 import ProgressChart from "../components/ProgressChart";
+import PortalStatus from "../components/PortalStatus";
 import { KpiData, PortalStatus as PortalStatusType } from "@/Types";
 
 export default function Dashboard() {
@@ -61,6 +62,9 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
         <div className="lg:col-span-2">
           <ProgressChart kpis={kpis} />
+        </div>
+        <div>
+          <PortalStatus portals={portals} />
         </div>
       </div>
     </div>

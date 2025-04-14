@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import DashboardHeader from '../components/DashboardHeader';
+import StatsOverview from '../components/StatsOverview';
 import { KpiData, PortalStatus as PortalStatusType } from '@/Types';
 
 export default function Dashboard() {
@@ -25,6 +26,11 @@ export default function Dashboard() {
         description="Automated tracking across government portals"
         timeRange={timeRange}
         onTimeRangeChange={setTimeRange}
+      />
+
+      <StatsOverview 
+        portals={portals}
+        kpis={kpis}
       />
     </div>
   );
